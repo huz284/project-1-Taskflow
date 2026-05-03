@@ -1,0 +1,13 @@
+# Local platform folders
+.netlify
+
+# Dependencies
+node_modules/
+taskflow/node_modules/
+
+# Next.js build output
+taskflow/.next/
+
+# Environment files
+taskflow/.env*
+!taskflow/.env.example

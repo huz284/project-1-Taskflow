@@ -1,10 +1,14 @@
+const path = require("path");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ["mongoose"],
-  },
+  serverExternalPackages: ["mongoose"],
+  outputFileTracingRoot: path.join(__dirname, ".."),
   images: {
-    domains: ["avatars.githubusercontent.com", "lh3.googleusercontent.com"],
+    remotePatterns: [
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
+    ],
   },
 };
 
