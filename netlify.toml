@@ -1,11 +1,12 @@
 [build]
   base = "taskflow"
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_ENV = "production"
   NEXTAUTH_URL = "https://your-site.netlify.app"
+  NPM_FLAGS = "--include=dev"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
